@@ -6,7 +6,7 @@ define('DBNAME', 'the_bloom_studio');
 
 // SMTP (send mail)
 define("SMTP_USERNAME", "nguyenducthanhlong159@gmail.com");
-define("SMTP_SECRET", "howrfxnasqiuybxy");
+define("SMTP_SECRET", "yxme lyvv jwvw xthc");
 define("SMTP_HOST", "smtp.gmail.com");
 define("SHOP_OWNER", "nguyenducthanhlong159@gmail.com");
 
