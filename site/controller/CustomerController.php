@@ -155,21 +155,7 @@ class CustomerController
     }
     function register()
     {
-        $secret = GOOGLE_RECAPTCHA_SECRET;
-        $recaptcha = new \ReCaptcha\ReCaptcha($secret);
-        $hostname = get_host_name();
-        $remoteIp = '127.0.0.1';
-        $gRecaptchaResponse = $_POST['g-recaptcha-response'];
-        $resp = $recaptcha->setExpectedHostname($hostname)
-            ->verify($gRecaptchaResponse, $remoteIp);
-        if (!$resp->isSuccess()) {
-            $errors = $resp->getErrorCodes();
-            //Chuyển array 2 phần tử thành chuỗi để hiển thị trên website 
-            $error = implode($errors, '<br>');
-            $_SESSION['error'] = $error;
-            header('location: /');
-            exit;
-        }
+        // reCAPTCHA verification removed to allow simplified registration flow
         // var_dump($_POST);
         $email = $_POST['email'];
         $customerRepository = new CustomerRepository();
